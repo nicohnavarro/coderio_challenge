@@ -1,0 +1,40 @@
+.navbar {
+  background-color: #de1e46;
+}
+.logo {
+  height: 3.75vw;
+  margin: 0;
+  max-height: 17px;
+  max-width: 110px;
+  width: 23.75vw;
+}
+.badges {
+  padding: 1rem;
+  max-height: 150px;
+  overflow-y: scroll;
+}
+.badge:hover{
+  cursor: pointer;
+}
+
+.alert {
+  position: fixed;
+  top:20px;
+  right:10px;
+}
+
+.mh-3 {
+  margin: 0.4rem 0.2rem;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #de1e46;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: #ffffff 0px 0px 5px inset;
+  border-radius: 10px;
+}

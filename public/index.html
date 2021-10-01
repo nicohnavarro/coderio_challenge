@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+  <link rel="icon" href="favicon.svg" type="image/x-icon">
+  <title>Coderio Challenge</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="images/logo.svg" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://github.com/nicohnavarro/coderio_challenge">Github repository</a>
+          </li>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-3">
+    <h3>Hi! I am Nicolas 👋, and this is my solution for the challenge.</h3>
+  </div>
+  <div class="container">
+    <div class="form-group">
+      <label for="paragraph" class="form-label mt-4">🗒️Paste the paragraph you want to validate...</label>
+      <textarea class="form-control" id="paragraph" rows="3" maxlength="1000"></textarea>
+      <small id="paragraphHelp" class="form-text text-muted">0/1000</small>
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <label for="wordNotAllowed" class="form-label mt-4">✏️Plase enter the words not allowed ...</label>
+          <div class="input-group">
+            <input type="text" maxlength="10" onkeypress="return event.charCode != 32" class="form-control" id="wordNotAllowed" aria-describedby="wordsHelp" placeholder="Enter a word and add it!">
+            <div class="invalid-feedback">Sorry, words can only contains letters of the alphabet</div>
+            <button type="button"  id="btnAddWordsNotAllowed" class="btn btn-primary ml-2">Add</button>
+          </div>
+          <small id="wordHelp" class="form-text text-muted">0/10</small>
+        </div>
+        <div class="col-sm-12 col-md-6 badges" >
+          <span class="col-sm-12 col-md-12">❌ Words not allowed</span>
+          <div id="wordsNotAllowed"></div>
+        </div>
+      </div>
+      <div class="row justify-content-center container-fluid">
+        <button type="button" class="btn btn-lg col-sm-6 col-md-2 m-1 btn-success mt-3" id="btnValidateParagraph">Validate</button>
+        <button type="button" class="btn btn-lg col-sm-6 col-md-2 m-1 btn-info mt-3" id="btnExample1">Example 1</button>
+        <button type="button" class="btn btn-lg col-sm-6 col-md-2 m-1 btn-info mt-3" id="btnExample2">Example 2</button>
+        <button type="button" class="btn btn-lg col-sm-6 col-md-2 m-1 btn-warning mt-3" id="btnClearAll">Clear all</button>
+      </div>
+      <div class="row mt-3">
+        <div class="answer">
+          <h4>Answer: <span id="answer"></span></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
